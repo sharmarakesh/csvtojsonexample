@@ -14,7 +14,7 @@ var appRouter = function (app) {
         .pipe(csv())
         .on('data', function(data){
             try {
-                myData.push({'name': data.name, 'age': data.age});
+                myData.push({'memberid': data.MemberId, 'memberFirstName': data.MemberFirstName, 'memberLastName': data.MemberLastName, 'requestType': data.RequestType, 'oralNotifocationDate': data.OralNotifocationDate,'WrittenNotificationDate': data.WrittenNotificationDate,'state': data.state});
                 //perform the operation
             }
             catch(err) {
